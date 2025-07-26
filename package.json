@@ -2,16 +2,17 @@
   "engines": {
     "node": "22.16.0"
   },
-  "name": "major-project",
+  "name": "wanderlust",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "My Wanderlust project",
   "dependencies": {
     "axios": "^1.11.0",
     "cloudinary": "^1.30.0",
