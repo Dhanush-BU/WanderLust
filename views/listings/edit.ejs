@@ -1,0 +1,46 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+     <div class="col-8 offset-2">
+    <form method="post" action="/listings/<%= listing._id %>?_method=put" novalidate class="needs-validation" enctype="multipart/form-data">
+        <h2>Edit your Listing</h2><br>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" value="<%= listing.title %>" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="description" class="form-control" required><%= listing.description %></textarea>
+             <div class="invalid-feedback">Please Enter short description</div>
+        </div>
+        <div class="mb-3">
+            Original Image  <br>
+            <img src="<%= originalImageUrl %>" style="height:300px ; width:350px">
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload New Image</label>
+             <input type="file" name="image"  %>" class="form-control" >
+             
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="price" value="<%= listing.price %>" class="form-control" required>
+            <div class="invalid-feedback">Enter valid Price</div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+             <input type="text" name="location" value="<%= listing.location %>" class="form-control" required>
+             <div class="invalid-feedback">Enter proper Location</div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="country" value="<%= listing.country %>" class="form-control" required>
+            <div class="invalid-feedback">Enter Country name</div>
+        </div>
+        
+        
+        <button class="btn btn-dark mt-3 edit-btn ">Update</button>
+    </form>
+    </div>
+</body>
+
